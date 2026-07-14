@@ -5,6 +5,21 @@ All notable user-facing changes are documented here. This project follows
 
 ## [Unreleased]
 
+## [0.2.1] - 2026-07-14
+
+### Added
+
+- Third-party dependency notices with reproducible review and audit commands,
+  included in the published npm package.
+
+### Changed
+
+- Repository discovery metadata, topics, Discussions, and release notes now
+  describe the local-first verification-gates positioning and supported
+  platforms.
+- The dashboard now uses the platform font stack, removing the unused `geist`
+  runtime dependency and its transitive production audit findings.
+
 ## [0.2.0] - 2026-07-14
 
 ### Added

@@ -53,6 +53,9 @@ commands or integrations in a shared project.
 See the [coding-agent compatibility matrix](docs/compatibility.md) for the
 portable surfaces and client-specific setup boundary.
 
+AIKC is MIT-licensed. See [third-party notices](THIRD_PARTY_NOTICES.md) for
+the reproducible dependency record and release audit commands.
+
 It is designed to be installed as a single global npm CLI. After installation, one command starts one HTTP server that serves both the UI and API from the same port.
 
 ## Features
