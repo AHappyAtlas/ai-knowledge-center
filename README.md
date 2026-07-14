@@ -8,6 +8,14 @@ leave verification evidence instead of guessing their workflow.
 
 ![AI Knowledge Center: local-first project context, verification gates, and repo-scoped MCP](docs/assets/ai-knowledge-center-social-preview.svg)
 
+### 18-second product walkthrough
+
+The real local dashboard below shows project knowledge alongside persistent
+verification evidence from five passed workflow gates. It uses a public-safe
+example project; no user project data is recorded.
+
+![AIKC dashboard: knowledge workspace and passed workflow gates](docs/assets/aikc-product-demo.gif)
+
 It is not another agent runtime or a generic skills library. AIKC is a
 lightweight control layer for the repository you already have: a CLI, local
 dashboard, project manifest, and stdio MCP server.
