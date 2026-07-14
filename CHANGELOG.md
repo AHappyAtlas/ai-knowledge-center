@@ -5,10 +5,15 @@ All notable user-facing changes are documented here. This project follows
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-07-14
+
 ### Added
 
 - Open-source governance, security, and release documentation.
 - Continuous integration for the package and knowledge workflow checks.
+- Local and global package-install smoke tests across the CI platform matrix.
+- `aikc context-pack` CLI entrypoint and persistent, privacy-safe gate evidence.
+- Runnable TypeScript, safe-upgrade, and multi-agent example projects.
 
 ## Release process
 
