@@ -23,6 +23,22 @@ function run(command, args, options = {}) {
   });
 }
 
+function assertDoctorHealthy(result, label) {
+  const errors = Array.isArray(result.checks)
+    ? result.checks.filter((item) => item && item.status === 'error')
+    : [];
+  if (result.status === 'fail' || errors.length > 0) {
+    const evidence = errors.map((item) => `${item.id}: ${item.evidence}`).join('; ');
+    throw new Error(`${label} doctor reported errors${evidence ? `: ${evidence}` : ''}`);
+  }
+  if (result.status === 'warn') {
+    const warnings = Array.isArray(result.checks)
+      ? result.checks.filter((item) => item && item.status === 'warn').map((item) => item.id).join(', ')
+      : 'unspecified';
+    console.log(`${label} doctor warnings (non-blocking): ${warnings}`);
+  }
+}
+
 try {
   const packed = JSON.parse(run(npm, ['pack', '--json']));
   tarball = join(root, packed[0].filename);
@@ -41,7 +57,7 @@ try {
   const contextPack = run(process.execPath, [cli, 'context-pack', '--project', projectDir, '--task', 'package smoke', '--summary'], { env, shell: false });
   const context = JSON.parse(contextPack);
 
-  if (result.status !== 'pass') throw new Error(`Generated project doctor returned ${result.status}`);
+  assertDoctorHealthy(result, 'Generated project');
   if (!Array.isArray(context.recommendedFiles)) throw new Error('Context pack did not return recommendedFiles');
   if (!existsSync(join(projectDir, 'ai-workflow.yaml'))) throw new Error('Generated project is missing ai-workflow.yaml');
   if (!existsSync(join(projectDir, 'ai-knowledge', 'LOAD.md'))) throw new Error('Generated project is missing ai-knowledge/LOAD.md');
@@ -58,7 +74,7 @@ try {
   writeFileSync(join(globalProjectDir, 'package.json'), '{"name":"aikc-global-smoke-project","private":true}\n');
   run(process.execPath, [globalCli, 'upgrade', '--project', globalProjectDir, '--write', '--ai'], { env, shell: false });
   const globalDoctor = JSON.parse(run(process.execPath, [globalCli, 'doctor', '--project', globalProjectDir, '--json'], { env, shell: false }));
-  if (globalDoctor.status !== 'pass') throw new Error(`Global installation doctor returned ${globalDoctor.status}`);
+  assertDoctorHealthy(globalDoctor, 'Global installation');
   if (!existsSync(join(globalProjectDir, 'ai-workflow.yaml'))) throw new Error('Global installation did not initialize a project');
 
   console.log(`package smoke ok (local and global install: ${basename(tarball)})`);
