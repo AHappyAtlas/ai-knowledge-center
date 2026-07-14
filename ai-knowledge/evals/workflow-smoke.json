@@ -1,0 +1,51 @@
+{
+  "name": "AIKC workflow smoke",
+  "description": "Checks that core AI workflow gates, human companions, and context packing remain runnable.",
+  "cases": [
+    {
+      "id": "doctor",
+      "command": "node ai-knowledge/scripts/doctor.cjs --json",
+      "expect": "\"status\""
+    },
+    {
+      "id": "context-pack",
+      "command": "node ai-knowledge/scripts/context-pack.cjs --task \"update AI workflow skill\"",
+      "expect": "recommendedFiles"
+    },
+    {
+      "id": "context-pack-summary",
+      "command": "node ai-knowledge/scripts/context-pack.cjs --summary --task \"token heavy log review\"",
+      "expect": "toolOutputPolicy"
+    },
+    {
+      "id": "repo-map",
+      "command": "node ai-knowledge/scripts/repo-map.cjs --json --query \"workflow token\"",
+      "expect": "recommendedFiles"
+    },
+    {
+      "id": "run-bounded",
+      "command": "node ai-knowledge/scripts/run-bounded.cjs --json -- node -e \"console.log('bounded_smoke')\"",
+      "expect": "fullLogPath"
+    },
+    {
+      "id": "token-budget-check",
+      "command": "node ai-knowledge/scripts/token-budget-check.cjs",
+      "expect": "Token budget check: pass"
+    },
+    {
+      "id": "observe-workflow",
+      "command": "node ai-knowledge/scripts/observe-workflow.cjs --phase smoke --task \"workflow observation smoke\" --json",
+      "expect": "workflow-observations.jsonl"
+    },
+    {
+      "id": "human-docs",
+      "command": "node ai-knowledge/scripts/human-docs-check.cjs",
+      "expect": "human docs ok"
+    },
+    {
+      "id": "knowledge",
+      "command": "node ai-knowledge/scripts/knowledge-check.cjs",
+      "expect": "knowledge ok"
+    }
+  ]
+}

@@ -1,0 +1,2872 @@
+{
+  "generatedAt": "2026-07-09T12:43:57.490Z",
+  "root": "C:\\Users\\youni\\Documents\\GitHub\\ai-knowledge-center",
+  "query": "token workflow",
+  "fileCount": 135,
+  "totalEstimatedTokens": 267496,
+  "files": [
+    {
+      "path": "ai-knowledge/scripts/ai-workflow-start.cjs",
+      "ext": ".cjs",
+      "bytes": 3905,
+      "estimatedTokens": 973,
+      "hash": "16d416c76347947f",
+      "mtimeMs": 1783590336909,
+      "symbols": [
+        "readTask",
+        "shouldRunTokenCheck"
+      ],
+      "imports": [
+        "node:fs",
+        "node:path",
+        "node:child_process",
+        "./knowledge-token-check.cjs"
+      ],
+      "score": 2
+    },
+    {
+      "path": "src/cli/project-upgrader.ts",
+      "ext": ".ts",
+      "bytes": 134740,
+      "estimatedTokens": 33678,
+      "hash": "a4eb7bf2470c10ce",
+      "mtimeMs": 1783601009327,
+      "symbols": [
+        "runProjectUpgrade",
+        "userRegistryPath",
+        "readOption",
+        "hasFlag",
+        "normalizeProjectId",
+        "pathExists",
+        "readTextIfExists",
+        "normalizeNewlines",
+        "mergeArrayById",
+        "mergeStringArray",
+        "isRecord",
+        "mergeWorkflowYaml",
+        "loadMd",
+        "aiLoadMd",
+        "coreLoadMd",
+        "loadEndMd",
+        "humanFriendlySummaryMd",
+        "verificationMd",
+        "riskReportMd",
+        "codeReviewPolicyMd",
+        "agentsMd",
+        "knowledgeCapturePolicyMd",
+        "scriptAutomationPolicyMd",
+        "boundedLoopPolicyMd",
+        "humanReadableKnowledgePolicyMd",
+        "tokenEfficiencyMd",
+        "projectCapabilitiesMd",
+        "openSourceUsageMd",
+        "taskCloseoutMd",
+        "skillIndexMd"
+      ],
+      "imports": [
+        "node:fs/promises",
+        "node:os",
+        "node:path",
+        "yaml",
+        "node:fs",
+        "node:child_process",
+        "node:crypto"
+      ],
+      "score": 2
+    },
+    {
+      "path": "ai-knowledge/core/LOAD.md",
+      "ext": ".md",
+      "bytes": 6166,
+      "estimatedTokens": 1501,
+      "hash": "1d357a25658ca863",
+      "mtimeMs": 1782160079821,
+      "symbols": [
+        "AIKC Core Load - Stage 0",
+        "Task Start",
+        "Required First Reply",
+        "Ownership Boundary",
+        "Skill Generation Rule",
+        "Reusable Automation Rule",
+        "Token Efficiency Rule",
+        "Script Automation Rule",
+        "Bounded Loop Rule",
+        "Human-Readable Knowledge Rule",
+        "Capability Reference",
+        "Open Source Usage Rule"
+      ],
+      "imports": [],
+      "score": 1
+    },
+    {
+      "path": "ai-knowledge/core/project-capabilities.md",
+      "ext": ".md",
+      "bytes": 8050,
+      "estimatedTokens": 2013,
+      "hash": "c459ba70af9082bd",
+      "mtimeMs": 1782335647604,
+      "symbols": [
+        "AIKC Project Capabilities",
+        "Core Runtime Shape",
+        "Project Discovery",
+        "Manifest Contract",
+        "Dashboard Contract",
+        "Upgrade And Initialization",
+        "Token And Template Updates",
+        "API And Automation",
+        "Release Discipline"
+      ],
+      "imports": [],
+      "score": 1
+    },
+    {
+      "path": "ai-knowledge/core/token-efficiency.md",
+      "ext": ".md",
+      "bytes": 6732,
+      "estimatedTokens": 1683,
+      "hash": "e617840424284aee",
+      "mtimeMs": 1783600456869,
+      "symbols": [
+        "Token Efficiency Policy",
+        "Minimal Context Loading",
+        "Stable Cache Prefix",
+        "Summaries Before Raw Logs",
+        "Structured Tool Output",
+        "Low-Frequency Caches",
+        "Operations Directory",
+        "Doctor Command",
+        "Repo Map",
+        "Context Pack Command",
+        "Fixed Closeout Shape",
+        "Do Not Optimize Blindly",
+        "Bound The Loop"
+      ],
+      "imports": [],
+      "score": 1
+    },
+    {
+      "path": "ai-knowledge/evals/workflow-smoke.json",
+      "ext": ".json",
+      "bytes": 1438,
+      "estimatedTokens": 360,
+      "hash": "961f61b7a567d2f6",
+      "mtimeMs": 1783601009329,
+      "symbols": [],
+      "imports": [],
+      "score": 1
+    },
+    {
+      "path": "ai-knowledge/scripts/context-pack.cjs",
+      "ext": ".cjs",
+      "bytes": 8998,
+      "estimatedTokens": 2243,
+      "hash": "656d26c08811be47",
+      "mtimeMs": 1783600426922,
+      "symbols": [
+        "argValue",
+        "exists",
+        "read",
+        "estimateTokens",
+        "fileInfo",
+        "loadIgnorePatterns",
+        "loadRepoMapRecommendations",
+        "sumTokens",
+        "applyBudget",
+        "skillRows",
+        "scoreSkill"
+      ],
+      "imports": [
+        "node:fs",
+        "node:crypto",
+        "node:path"
+      ],
+      "score": 1
+    },
+    {
+      "path": "ai-knowledge/scripts/eval-workflow.cjs",
+      "ext": ".cjs",
+      "bytes": 1292,
+      "estimatedTokens": 323,
+      "hash": "2df6f13e9e336470",
+      "mtimeMs": 1782152298006,
+      "symbols": [
+        "splitCommand"
+      ],
+      "imports": [
+        "node:fs",
+        "node:path",
+        "node:child_process"
+      ],
+      "score": 1
+    },
+    {
+      "path": "ai-knowledge/scripts/knowledge-token-check.cjs",
+      "ext": ".cjs",
+      "bytes": 3555,
+      "estimatedTokens": 889,
+      "hash": "59f695609a375754",
+      "mtimeMs": 1782147999386,
+      "symbols": [
+        "estimateTokens",
+        "toRepoPath",
+        "shouldSkip",
+        "walk",
+        "readStats"
+      ],
+      "imports": [
+        "node:fs",
+        "node:path"
+      ],
+      "score": 1
+    },
+    {
+      "path": "ai-knowledge/scripts/repo-map.cjs",
+      "ext": ".cjs",
+      "bytes": 5176,
+      "estimatedTokens": 1294,
+      "hash": "b11640f686874c42",
+      "mtimeMs": 1783600426921,
+      "symbols": [
+        "argValue",
+        "usage",
+        "loadIgnorePatterns",
+        "matchPattern",
+        "ignored",
+        "walk",
+        "estimateTokens",
+        "extractSymbols",
+        "extractImports"
+      ],
+      "imports": [
+        "node:fs",
+        "node:crypto",
+        "node:path"
+      ],
+      "score": 1
+    },
+    {
+      "path": "ai-knowledge/scripts/token-budget-check.cjs",
+      "ext": ".cjs",
+      "bytes": 3529,
+      "estimatedTokens": 883,
+      "hash": "b3c2a45e82bf9ef3",
+      "mtimeMs": 1783600543273,
+      "symbols": [
+        "argValue",
+        "run",
+        "check"
+      ],
+      "imports": [
+        "node:fs",
+        "node:path",
+        "node:child_process"
+      ],
+      "score": 1
+    },
+    {
+      "path": "ai-knowledge/skills/aikc-project-workflow/SKILL.md",
+      "ext": ".md",
+      "bytes": 4118,
+      "estimatedTokens": 1030,
+      "hash": "40497756917607d0",
+      "mtimeMs": 1782335857642,
+      "symbols": [
+        "AIKC Project Workflow Skill",
+        "Stable Project Facts",
+        "Change Guidance",
+        "Validation"
+      ],
+      "imports": [],
+      "score": 1
+    },
+    {
+      "path": "ai-workflow.yaml",
+      "ext": ".yaml",
+      "bytes": 6425,
+      "estimatedTokens": 1607,
+      "hash": "cc5ddb99cd413e1c",
+      "mtimeMs": 1783600456863,
+      "symbols": [],
+      "imports": [],
+      "score": 1
+    },
+    {
+      "path": "README.md",
+      "ext": ".md",
+      "bytes": 25336,
+      "estimatedTokens": 6322,
+      "hash": "5f318c97e8b02311",
+      "mtimeMs": 1782335632469,
+      "symbols": [
+        "AI Knowledge Center",
+        "Features",
+        "Install",
+        "One-Command Project Setup",
+        "Update Another Project Workflow",
+        "Start",
+        "MCP Server",
+        "Configure Projects",
+        "Option 1: Pass Projects Directly",
+        "Option 2: Use config/projects.json",
+        "Project Manifest",
+        "Upgrade Existing Projects",
+        "CLI Options",
+        "Development",
+        "Build",
+        "Publish",
+        "API",
+        "Notes"
+      ],
+      "imports": [],
+      "score": 1
+    },
+    {
+      "path": "src/server/config.ts",
+      "ext": ".ts",
+      "bytes": 4718,
+      "estimatedTokens": 1180,
+      "hash": "336d791efb262cf6",
+      "mtimeMs": 1782139912366,
+      "symbols": [
+        "loadRegistryEntries",
+        "splitEnvPaths",
+        "pathExists",
+        "hasWorkflowSignals",
+        "uniquePaths",
+        "existingDirectories",
+        "discoveryRoots",
+        "rootFromSignal",
+        "discoverProjects",
+        "loadRegistryEntries"
+      ],
+      "imports": [
+        "node:fs/promises",
+        "node:path",
+        "fast-glob",
+        "./paths.js",
+        "../shared/manifest.js"
+      ],
+      "score": 1
+    },
+    {
+      "path": "src/shared/manifest.ts",
+      "ext": ".ts",
+      "bytes": 6921,
+      "estimatedTokens": 1731,
+      "hash": "1fd44093637e7c1f",
+      "mtimeMs": 1782293329184,
+      "symbols": [
+        "packageManagerSchema",
+        "PackageManager",
+        "scriptToCommand",
+        "commandSchema",
+        "knowledgeSchema",
+        "gateSchema",
+        "dashboardSchema",
+        "mcpServerSchema",
+        "mcpSchema",
+        "integrationSchema",
+        "integrationsSchema",
+        "telemetrySchema",
+        "daggerSchema",
+        "loopBudgetSchema",
+        "workflowLoopSchema",
+        "workflowManifestSchema",
+        "WorkflowCommand",
+        "WorkflowGate",
+        "McpServer",
+        "WorkflowIntegration",
+        "WorkflowLoop",
+        "WorkflowManifest",
+        "registryEntrySchema",
+        "registrySchema",
+        "RegistryEntry",
+        "RegistryFile",
+        "shellArg",
+        "scriptToCommand"
+      ],
+      "imports": [
+        "zod"
+      ],
+      "score": 1
+    },
+    {
+      "path": ".aikc/task-state/current.json",
+      "ext": ".json",
+      "bytes": 1909,
+      "estimatedTokens": 468,
+      "hash": "07116a1bb0111ab1",
+      "mtimeMs": 1783591226553,
+      "symbols": [],
+      "imports": [],
+      "score": 0
+    },
+    {
+      "path": "AGENTS.md",
+      "ext": ".md",
+      "bytes": 2948,
+      "estimatedTokens": 731,
+      "hash": "7f40c75ce7b0a594",
+      "mtimeMs": 1782148798410,
+      "symbols": [
+        "AI Knowledge Center Agent Guide",
+        "Start Rule",
+        "Project Shape",
+        "Risk Boundaries",
+        "Validation",
+        "Closeout"
+      ],
+      "imports": [],
+      "score": 0
+    },
+    {
+      "path": "ai-knowledge/ai/LOAD.md",
+      "ext": ".md",
+      "bytes": 1845,
+      "estimatedTokens": 439,
+      "hash": "b021b4372d67fd80",
+      "mtimeMs": 1782160079823,
+      "symbols": [
+        "Agent Stage 0 Router",
+        "1. Extract Task",
+        "2. Ensure CLI",
+        "3. Start Project Route",
+        "4. Skill Routing",
+        "5. Closeout",
+        "Required First Reply"
+      ],
+      "imports": [],
+      "score": 0
+    },
+    {
+      "path": "ai-knowledge/core/bounded-loop-policy.md",
+      "ext": ".md",
+      "bytes": 2919,
+      "estimatedTokens": 730,
+      "hash": "84f5104e333cefd4",
+      "mtimeMs": 1782152607024,
+      "symbols": [
+        "Bounded Loop Policy",
+        "Loop Contract",
+        "Preferred Loops",
+        "Anti-Patterns",
+        "Manifest Guidance"
+      ],
+      "imports": [],
+      "score": 0
+    },
+    {
+      "path": "ai-knowledge/core/code-review-policy.md",
+      "ext": ".md",
+      "bytes": 1518,
+      "estimatedTokens": 380,
+      "hash": "4079e06135344dfd",
+      "mtimeMs": 1782148126081,
+      "symbols": [
+        "Code Review Policy",
+        "Review Standard",
+        "Required Review Steps",
+        "Final Response Requirement"
+      ],
+      "imports": [],
+      "score": 0
+    },
+    {
+      "path": "ai-knowledge/core/human-friendly-task-summary.md",
+      "ext": ".md",
+      "bytes": 2978,
+      "estimatedTokens": 745,
+      "hash": "3e09d4b1f75c0453",
+      "mtimeMs": 1782334685687,
+      "symbols": [
+        "Human-Friendly Task Summary",
+        "Progress Replies",
+        "Final Replies",
+        "Multi-Item Tables"
+      ],
+      "imports": [],
+      "score": 0
+    },
+    {
+      "path": "ai-knowledge/core/human-readable-knowledge-policy.md",
+      "ext": ".md",
+      "bytes": 2056,
+      "estimatedTokens": 514,
+      "hash": "bd3ba8df09607d77",
+      "mtimeMs": 1782151533957,
+      "symbols": [
+        "Human-Readable Knowledge Policy",
+        "Storage Layout",
+        "Update Rule",
+        "AI Reading Rule",
+        "Backfill Rule",
+        "Companion Shape"
+      ],
+      "imports": [],
+      "score": 0
+    },
+    {
+      "path": "ai-knowledge/core/knowledge-capture-policy.md",
+      "ext": ".md",
+      "bytes": 2833,
+      "estimatedTokens": 707,
+      "hash": "165a5d9d9f033c97",
+      "mtimeMs": 1782151533963,
+      "symbols": [
+        "Knowledge Capture Policy",
+        "Capture When",
+        "Where To Capture",
+        "Automation Packaging Decision",
+        "Do Not Capture",
+        "Required Final Decision"
+      ],
+      "imports": [],
+      "score": 0
+    },
+    {
+      "path": "ai-knowledge/core/LOAD-END.md",
+      "ext": ".md",
+      "bytes": 3482,
+      "estimatedTokens": 871,
+      "hash": "0a5b2d367cdc73f2",
+      "mtimeMs": 1782334697264,
+      "symbols": [
+        "AIKC Core Load - Stage 1 Closeout",
+        "Mandatory Closeout",
+        "Reply Message Rules"
+      ],
+      "imports": [],
+      "score": 0
+    },
+    {
+      "path": "ai-knowledge/core/open-source-usage.md",
+      "ext": ".md",
+      "bytes": 2978,
+      "estimatedTokens": 745,
+      "hash": "156fb21a59fd51c9",
+      "mtimeMs": 1782293406511,
+      "symbols": [
+        "Open Source Usage Policy",
+        "Prefer Libraries For",
+        "Selection Criteria",
+        "Implementation Rules",
+        "Useful Package Categories"
+      ],
+      "imports": [],
+      "score": 0
+    },
+    {
+      "path": "ai-knowledge/core/script-automation-policy.md",
+      "ext": ".md",
+      "bytes": 3231,
+      "estimatedTokens": 808,
+      "hash": "8ef2ca0e36655fd7",
+      "mtimeMs": 1782334705794,
+      "symbols": [
+        "Script Automation Policy",
+        "When To Script",
+        "Script Standards",
+        "Agent Responsibilities",
+        "Automation Candidate Table"
+      ],
+      "imports": [],
+      "score": 0
+    },
+    {
+      "path": "ai-knowledge/core/task-closeout-risk-report.md",
+      "ext": ".md",
+      "bytes": 2017,
+      "estimatedTokens": 505,
+      "hash": "8562c5ede08f2ab3",
+      "mtimeMs": 1782151842699,
+      "symbols": [
+        "Task Closeout Risk Report"
+      ],
+      "imports": [],
+      "score": 0
+    },
+    {
+      "path": "ai-knowledge/core/task-closeout-verification.md",
+      "ext": ".md",
+      "bytes": 960,
+      "estimatedTokens": 240,
+      "hash": "4eab69bdab268d82",
+      "mtimeMs": 1782148126083,
+      "symbols": [
+        "Task Closeout Verification"
+      ],
+      "imports": [],
+      "score": 0
+    },
+    {
+      "path": "ai-knowledge/LOAD.md",
+      "ext": ".md",
+      "bytes": 2365,
+      "estimatedTokens": 589,
+      "hash": "09f34f2b07a01619",
+      "mtimeMs": 1782160020766,
+      "symbols": [
+        "AI Knowledge Center Load"
+      ],
+      "imports": [],
+      "score": 0
+    },
+    {
+      "path": "ai-knowledge/prompt/任务收尾-Review并沉淀.md",
+      "ext": ".md",
+      "bytes": 2687,
+      "estimatedTokens": 372,
+      "hash": "18e7bffd9b137f58",
+      "mtimeMs": 1782293918335,
+      "symbols": [
+        "任务收尾：Review 并沉淀",
+        "1. Review",
+        "2. Validate",
+        "3. Knowledge Capture",
+        "4. Final Report"
+      ],
+      "imports": [],
+      "score": 0
+    },
+    {
+      "path": "ai-knowledge/scripts/ai-closeout.cjs",
+      "ext": ".cjs",
+      "bytes": 1215,
+      "estimatedTokens": 301,
+      "hash": "b374167c3649274e",
+      "mtimeMs": 1782159976524,
+      "symbols": [
+        "run"
+      ],
+      "imports": [
+        "node:child_process",
+        "node:path"
+      ],
+      "score": 0
+    },
+    {
+      "path": "ai-knowledge/scripts/code-review.cjs",
+      "ext": ".cjs",
+      "bytes": 3905,
+      "estimatedTokens": 977,
+      "hash": "fc904f46154e8d3b",
+      "mtimeMs": 1782147999384,
+      "symbols": [
+        "fail",
+        "read",
+        "run",
+        "gitFiles",
+        "walkFiles",
+        "fallbackFiles",
+        "isTextFile"
+      ],
+      "imports": [
+        "node:fs",
+        "node:path",
+        "node:child_process",
+        "ignore"
+      ],
+      "score": 0
+    },
+    {
+      "path": "ai-knowledge/scripts/doctor.cjs",
+      "ext": ".cjs",
+      "bytes": 4867,
+      "estimatedTokens": 1217,
+      "hash": "e61d05389bd8d0f8",
+      "mtimeMs": 1783600456870,
+      "symbols": [
+        "exists",
+        "run",
+        "check",
+        "serverState",
+        "unresolvedUpgradeCandidates"
+      ],
+      "imports": [
+        "node:fs",
+        "node:os",
+        "node:path",
+        "node:child_process"
+      ],
+      "score": 0
+    },
+    {
+      "path": "ai-knowledge/scripts/ensure-aikc-cli.cjs",
+      "ext": ".cjs",
+      "bytes": 7504,
+      "estimatedTokens": 1876,
+      "hash": "90dd73e1010a72aa",
+      "mtimeMs": 1782335608282,
+      "symbols": [
+        "stateRoot",
+        "pidFilePath",
+        "run",
+        "combinedOutput",
+        "npm",
+        "latestVersion",
+        "installedVersion",
+        "commandExists",
+        "installGlobal",
+        "manualRetryMessage",
+        "readServerState",
+        "isProcessRunning",
+        "waitForExit",
+        "stopServerState",
+        "restartServerIfNeeded",
+        "startServerFromState",
+        "installGlobalWithServerHandling",
+        "ensureCli",
+        "upgradeArgsWithDefaults",
+        "runUpgrade",
+        "startDashboard"
+      ],
+      "imports": [
+        "node:child_process",
+        "node:fs",
+        "node:os",
+        "node:path"
+      ],
+      "score": 0
+    },
+    {
+      "path": "ai-knowledge/scripts/human-docs-check.cjs",
+      "ext": ".cjs",
+      "bytes": 1183,
+      "estimatedTokens": 296,
+      "hash": "ff7ef8c590f1c484",
+      "mtimeMs": 1782151533960,
+      "symbols": [
+        "read",
+        "exists",
+        "skillPaths"
+      ],
+      "imports": [
+        "node:fs",
+        "node:path"
+      ],
+      "score": 0
+    },
+    {
+      "path": "ai-knowledge/scripts/knowledge-check.cjs",
+      "ext": ".cjs",
+      "bytes": 11924,
+      "estimatedTokens": 2978,
+      "hash": "ea095d83c5f5ec73",
+      "mtimeMs": 1783600764395,
+      "symbols": [],
+      "imports": [
+        "node:fs",
+        "node:path"
+      ],
+      "score": 0
+    },
+    {
+      "path": "ai-knowledge/scripts/log-summary.cjs",
+      "ext": ".cjs",
+      "bytes": 3203,
+      "estimatedTokens": 801,
+      "hash": "b70799073a107e62",
+      "mtimeMs": 1783590336907,
+      "symbols": [
+        "argValue",
+        "usage"
+      ],
+      "imports": [
+        "node:fs",
+        "node:path"
+      ],
+      "score": 0
+    },
+    {
+      "path": "ai-knowledge/scripts/README.md",
+      "ext": ".md",
+      "bytes": 4421,
+      "estimatedTokens": 1106,
+      "hash": "5cd7bfc0e9b7e094",
+      "mtimeMs": 1783600456866,
+      "symbols": [
+        "AI Knowledge Scripts"
+      ],
+      "imports": [],
+      "score": 0
+    },
+    {
+      "path": "ai-knowledge/scripts/run-bounded.cjs",
+      "ext": ".cjs",
+      "bytes": 3728,
+      "estimatedTokens": 932,
+      "hash": "ff89ddfd3a7eee41",
+      "mtimeMs": 1783600519387,
+      "symbols": [
+        "argValue",
+        "usage",
+        "recentText"
+      ],
+      "imports": [
+        "node:fs",
+        "node:path",
+        "node:child_process"
+      ],
+      "score": 0
+    },
+    {
+      "path": "ai-knowledge/scripts/task-state.cjs",
+      "ext": ".cjs",
+      "bytes": 5920,
+      "estimatedTokens": 1480,
+      "hash": "abcf56073292e977",
+      "mtimeMs": 1782160034731,
+      "symbols": [
+        "now",
+        "readState",
+        "writeState",
+        "argValue",
+        "print",
+        "usage"
+      ],
+      "imports": [
+        "node:fs",
+        "node:path"
+      ],
+      "score": 0
+    },
+    {
+      "path": "ai-knowledge/skills/SKILL_INDEX.md",
+      "ext": ".md",
+      "bytes": 299,
+      "estimatedTokens": 75,
+      "hash": "9b9c5dbd238cf12b",
+      "mtimeMs": 1781321241485,
+      "symbols": [
+        "Skill Index"
+      ],
+      "imports": [],
+      "score": 0
+    },
+    {
+      "path": "config/projects.example.json",
+      "ext": ".json",
+      "bytes": 485,
+      "estimatedTokens": 122,
+      "hash": "c61c3c02b0e6c0f5",
+      "mtimeMs": 1781246663449,
+      "symbols": [],
+      "imports": [],
+      "score": 0
+    },
+    {
+      "path": "eslint.config.js",
+      "ext": ".js",
+      "bytes": 465,
+      "estimatedTokens": 117,
+      "hash": "4c0a8c48ae134cc2",
+      "mtimeMs": 1781166117529,
+      "symbols": [],
+      "imports": [
+        "typescript-eslint"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/ATTRIBUTIONS.md",
+      "ext": ".md",
+      "bytes": 290,
+      "estimatedTokens": 73,
+      "hash": "7eef0ed2b6fb8a4d",
+      "mtimeMs": 1781263529078,
+      "symbols": [],
+      "imports": [],
+      "score": 0
+    },
+    {
+      "path": "figma/guidelines/Guidelines.md",
+      "ext": ".md",
+      "bytes": 2559,
+      "estimatedTokens": 639,
+      "hash": "8a4a52a8fac382f8",
+      "mtimeMs": 1781263529074,
+      "symbols": [
+        "General guidelines",
+        "Design system guidelines",
+        "Button",
+        "Usage",
+        "Variants"
+      ],
+      "imports": [],
+      "score": 0
+    },
+    {
+      "path": "figma/package.json",
+      "ext": ".json",
+      "bytes": 2571,
+      "estimatedTokens": 643,
+      "hash": "52d15119e7988184",
+      "mtimeMs": 1781263529079,
+      "symbols": [],
+      "imports": [],
+      "score": 0
+    },
+    {
+      "path": "figma/pnpm-workspace.yaml",
+      "ext": ".yaml",
+      "bytes": 17,
+      "estimatedTokens": 5,
+      "hash": "11c9ba769c156f38",
+      "mtimeMs": 1781263529082,
+      "symbols": [],
+      "imports": [],
+      "score": 0
+    },
+    {
+      "path": "figma/postcss.config.mjs",
+      "ext": ".mjs",
+      "bytes": 460,
+      "estimatedTokens": 115,
+      "hash": "3bd292996c6442cf",
+      "mtimeMs": 1781263529075,
+      "symbols": [],
+      "imports": [
+        "postcss-nested"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/README.md",
+      "ext": ".md",
+      "bytes": 332,
+      "estimatedTokens": 83,
+      "hash": "d3a30abb1730f024",
+      "mtimeMs": 1781263528978,
+      "symbols": [],
+      "imports": [],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/App.tsx",
+      "ext": ".tsx",
+      "bytes": 10525,
+      "estimatedTokens": 2623,
+      "hash": "596c97b5cf7b8047",
+      "mtimeMs": 1781263528980,
+      "symbols": [
+        "SegmentedControl",
+        "KnowledgeView",
+        "MainContent",
+        "AppInner",
+        "App"
+      ],
+      "imports": [
+        "react",
+        "motion/react",
+        "lucide-react",
+        "sonner",
+        "./components/ui/button",
+        "./components/ui/input",
+        "./components/ui/select",
+        "./components/ui/utils",
+        "./context/AppContext",
+        "./components/Header",
+        "./components/ProjectSidebar",
+        "./components/KnowledgeTree",
+        "./components/SkillsTable",
+        "./components/DocPreview",
+        "./components/ProjectView",
+        "./types"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/DocPreview.tsx",
+      "ext": ".tsx",
+      "bytes": 4790,
+      "estimatedTokens": 1198,
+      "hash": "ddbe23ca8504407f",
+      "mtimeMs": 1781263529050,
+      "symbols": [
+        "DocPreview",
+        "formatSize",
+        "getFileIcon",
+        "getBreadcrumbs",
+        "isMarkdown",
+        "wrapNonMd",
+        "Chip",
+        "DocPreview"
+      ],
+      "imports": [
+        "lucide-react",
+        "motion/react",
+        "./MarkdownRenderer",
+        "./ui/utils",
+        "../context/AppContext",
+        "../types"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/figma/ImageWithFallback.tsx",
+      "ext": ".tsx",
+      "bytes": 1153,
+      "estimatedTokens": 289,
+      "hash": "79caaf9d1736698c",
+      "mtimeMs": 1781263528982,
+      "symbols": [
+        "ImageWithFallback",
+        "ImageWithFallback"
+      ],
+      "imports": [
+        "react"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/Header.tsx",
+      "ext": ".tsx",
+      "bytes": 3424,
+      "estimatedTokens": 851,
+      "hash": "a4b54e71416cd417",
+      "mtimeMs": 1781263529051,
+      "symbols": [
+        "Header",
+        "formatScanTime",
+        "Header"
+      ],
+      "imports": [
+        "lucide-react",
+        "motion/react",
+        "./ui/button",
+        "../context/AppContext",
+        "./ui/utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/KnowledgeTree.tsx",
+      "ext": ".tsx",
+      "bytes": 4606,
+      "estimatedTokens": 1150,
+      "hash": "b1ea989330adf079",
+      "mtimeMs": 1781263529053,
+      "symbols": [
+        "KnowledgeTree",
+        "getFileIcon",
+        "TreeNode",
+        "KnowledgeTree"
+      ],
+      "imports": [
+        "react",
+        "lucide-react",
+        "motion/react",
+        "./ui/utils",
+        "sonner",
+        "../context/AppContext",
+        "../types"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/MarkdownRenderer.tsx",
+      "ext": ".tsx",
+      "bytes": 4324,
+      "estimatedTokens": 1081,
+      "hash": "1766d0ac0912b223",
+      "mtimeMs": 1781263529054,
+      "symbols": [
+        "MarkdownRenderer",
+        "escapeHtml",
+        "parseInline",
+        "parseMarkdown",
+        "MarkdownRenderer"
+      ],
+      "imports": [
+        "react",
+        "./ui/utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ProjectSidebar.tsx",
+      "ext": ".tsx",
+      "bytes": 5834,
+      "estimatedTokens": 1454,
+      "hash": "de3a7cbbc00eb090",
+      "mtimeMs": 1781263529055,
+      "symbols": [
+        "ProjectSidebar",
+        "ProjectSidebar"
+      ],
+      "imports": [
+        "react",
+        "lucide-react",
+        "motion/react",
+        "./ui/input",
+        "./ui/utils",
+        "../context/AppContext",
+        "../data/mock",
+        "../types"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ProjectView.tsx",
+      "ext": ".tsx",
+      "bytes": 9393,
+      "estimatedTokens": 2349,
+      "hash": "afc839f33346e9ce",
+      "mtimeMs": 1781263529056,
+      "symbols": [
+        "ProjectView",
+        "SectionTitle",
+        "InfoRow",
+        "StatusChip",
+        "CapabilityBadge",
+        "ProjectView"
+      ],
+      "imports": [
+        "lucide-react",
+        "./ui/utils",
+        "../context/AppContext"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/SkillsTable.tsx",
+      "ext": ".tsx",
+      "bytes": 9802,
+      "estimatedTokens": 2451,
+      "hash": "21ed384c0f9e5293",
+      "mtimeMs": 1781263529058,
+      "symbols": [
+        "SkillsTable",
+        "formatSize",
+        "SortButton",
+        "SkillsTable"
+      ],
+      "imports": [
+        "react",
+        "lucide-react",
+        "./ui/button",
+        "./ui/input",
+        "./ui/select",
+        "./ui/utils",
+        "sonner",
+        "../context/AppContext",
+        "../types"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/accordion.tsx",
+      "ext": ".tsx",
+      "bytes": 2060,
+      "estimatedTokens": 515,
+      "hash": "0ff6fadd3560c21a",
+      "mtimeMs": 1781263529039,
+      "symbols": [
+        "Accordion",
+        "AccordionItem",
+        "AccordionTrigger",
+        "AccordionContent"
+      ],
+      "imports": [
+        "react",
+        "@radix-ui/react-accordion",
+        "lucide-react",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/alert-dialog.tsx",
+      "ext": ".tsx",
+      "bytes": 3866,
+      "estimatedTokens": 967,
+      "hash": "16f0bf95de446a85",
+      "mtimeMs": 1781263529037,
+      "symbols": [
+        "AlertDialog",
+        "AlertDialogTrigger",
+        "AlertDialogPortal",
+        "AlertDialogOverlay",
+        "AlertDialogContent",
+        "AlertDialogHeader",
+        "AlertDialogFooter",
+        "AlertDialogTitle",
+        "AlertDialogDescription",
+        "AlertDialogAction",
+        "AlertDialogCancel"
+      ],
+      "imports": [
+        "react",
+        "@radix-ui/react-alert-dialog",
+        "./utils",
+        "./button"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/alert.tsx",
+      "ext": ".tsx",
+      "bytes": 1621,
+      "estimatedTokens": 406,
+      "hash": "19835c5f03b78e89",
+      "mtimeMs": 1781263529048,
+      "symbols": [
+        "Alert",
+        "AlertTitle",
+        "AlertDescription"
+      ],
+      "imports": [
+        "react",
+        "class-variance-authority",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/aspect-ratio.tsx",
+      "ext": ".tsx",
+      "bytes": 284,
+      "estimatedTokens": 71,
+      "hash": "7706745e217bebbc",
+      "mtimeMs": 1781263529032,
+      "symbols": [
+        "AspectRatio"
+      ],
+      "imports": [
+        "@radix-ui/react-aspect-ratio"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/avatar.tsx",
+      "ext": ".tsx",
+      "bytes": 1104,
+      "estimatedTokens": 276,
+      "hash": "d40b1cbabe71c094",
+      "mtimeMs": 1781263529041,
+      "symbols": [
+        "Avatar",
+        "AvatarImage",
+        "AvatarFallback"
+      ],
+      "imports": [
+        "react",
+        "@radix-ui/react-avatar",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/badge.tsx",
+      "ext": ".tsx",
+      "bytes": 1636,
+      "estimatedTokens": 409,
+      "hash": "8329a0b50f818665",
+      "mtimeMs": 1781263529018,
+      "symbols": [
+        "Badge"
+      ],
+      "imports": [
+        "react",
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/breadcrumb.tsx",
+      "ext": ".tsx",
+      "bytes": 2368,
+      "estimatedTokens": 592,
+      "hash": "c9fcf4df692c80c0",
+      "mtimeMs": 1781263529044,
+      "symbols": [
+        "Breadcrumb",
+        "BreadcrumbList",
+        "BreadcrumbItem",
+        "BreadcrumbLink",
+        "BreadcrumbPage",
+        "BreadcrumbSeparator",
+        "BreadcrumbEllipsis"
+      ],
+      "imports": [
+        "react",
+        "@radix-ui/react-slot",
+        "lucide-react",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/button.tsx",
+      "ext": ".tsx",
+      "bytes": 2106,
+      "estimatedTokens": 527,
+      "hash": "a3f96150fdf0c929",
+      "mtimeMs": 1781263529029,
+      "symbols": [
+        "Button"
+      ],
+      "imports": [
+        "react",
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/calendar.tsx",
+      "ext": ".tsx",
+      "bytes": 2913,
+      "estimatedTokens": 729,
+      "hash": "280ba2b6416bb462",
+      "mtimeMs": 1781263529024,
+      "symbols": [
+        "Calendar"
+      ],
+      "imports": [
+        "react",
+        "lucide-react",
+        "react-day-picker",
+        "./utils",
+        "./button"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/card.tsx",
+      "ext": ".tsx",
+      "bytes": 1988,
+      "estimatedTokens": 497,
+      "hash": "afc99cfa090791e3",
+      "mtimeMs": 1781263529042,
+      "symbols": [
+        "Card",
+        "CardHeader",
+        "CardTitle",
+        "CardDescription",
+        "CardAction",
+        "CardContent",
+        "CardFooter"
+      ],
+      "imports": [
+        "react",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/carousel.tsx",
+      "ext": ".tsx",
+      "bytes": 5606,
+      "estimatedTokens": 1402,
+      "hash": "5ffdde6336f0ee47",
+      "mtimeMs": 1781263529020,
+      "symbols": [
+        "useCarousel",
+        "Carousel",
+        "CarouselContent",
+        "CarouselItem",
+        "CarouselPrevious",
+        "CarouselNext"
+      ],
+      "imports": [
+        "react",
+        "embla-carousel-react",
+        "lucide-react",
+        "./utils",
+        "./button"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/chart.tsx",
+      "ext": ".tsx",
+      "bytes": 9852,
+      "estimatedTokens": 2463,
+      "hash": "e3e14ac980ce857e",
+      "mtimeMs": 1781263529043,
+      "symbols": [
+        "ChartConfig",
+        "useChart",
+        "ChartContainer",
+        "ChartTooltipContent",
+        "ChartLegendContent",
+        "getPayloadConfigFromPayload"
+      ],
+      "imports": [
+        "react",
+        "recharts",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/checkbox.tsx",
+      "ext": ".tsx",
+      "bytes": 1244,
+      "estimatedTokens": 311,
+      "hash": "894eb30992723a15",
+      "mtimeMs": 1781263529017,
+      "symbols": [
+        "Checkbox"
+      ],
+      "imports": [
+        "react",
+        "@radix-ui/react-checkbox",
+        "lucide-react",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/collapsible.tsx",
+      "ext": ".tsx",
+      "bytes": 806,
+      "estimatedTokens": 202,
+      "hash": "b763764ebced561c",
+      "mtimeMs": 1781263529016,
+      "symbols": [
+        "Collapsible",
+        "CollapsibleTrigger",
+        "CollapsibleContent"
+      ],
+      "imports": [
+        "@radix-ui/react-collapsible"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/command.tsx",
+      "ext": ".tsx",
+      "bytes": 4662,
+      "estimatedTokens": 1166,
+      "hash": "17ae21889928aeb0",
+      "mtimeMs": 1781263529014,
+      "symbols": [
+        "Command",
+        "CommandDialog",
+        "CommandInput",
+        "CommandList",
+        "CommandEmpty",
+        "CommandGroup",
+        "CommandSeparator",
+        "CommandItem",
+        "CommandShortcut"
+      ],
+      "imports": [
+        "react",
+        "cmdk",
+        "lucide-react",
+        "./utils",
+        "./dialog"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/context-menu.tsx",
+      "ext": ".tsx",
+      "bytes": 8251,
+      "estimatedTokens": 2063,
+      "hash": "e17a7028f18669dd",
+      "mtimeMs": 1781263529025,
+      "symbols": [
+        "ContextMenu",
+        "ContextMenuTrigger",
+        "ContextMenuGroup",
+        "ContextMenuPortal",
+        "ContextMenuSub",
+        "ContextMenuRadioGroup",
+        "ContextMenuSubTrigger",
+        "ContextMenuSubContent",
+        "ContextMenuContent",
+        "ContextMenuItem",
+        "ContextMenuCheckboxItem",
+        "ContextMenuRadioItem",
+        "ContextMenuLabel",
+        "ContextMenuSeparator",
+        "ContextMenuShortcut"
+      ],
+      "imports": [
+        "react",
+        "@radix-ui/react-context-menu",
+        "lucide-react",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/dialog.tsx",
+      "ext": ".tsx",
+      "bytes": 3828,
+      "estimatedTokens": 957,
+      "hash": "f4adc0065a7f795b",
+      "mtimeMs": 1781263529013,
+      "symbols": [
+        "Dialog",
+        "DialogTrigger",
+        "DialogPortal",
+        "DialogClose",
+        "DialogOverlay",
+        "DialogContent",
+        "DialogHeader",
+        "DialogFooter",
+        "DialogTitle",
+        "DialogDescription"
+      ],
+      "imports": [
+        "react",
+        "@radix-ui/react-dialog",
+        "lucide-react",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/drawer.tsx",
+      "ext": ".tsx",
+      "bytes": 4085,
+      "estimatedTokens": 1022,
+      "hash": "5a99d073185e0ef6",
+      "mtimeMs": 1781263529021,
+      "symbols": [
+        "Drawer",
+        "DrawerTrigger",
+        "DrawerPortal",
+        "DrawerClose",
+        "DrawerOverlay",
+        "DrawerContent",
+        "DrawerHeader",
+        "DrawerFooter",
+        "DrawerTitle",
+        "DrawerDescription"
+      ],
+      "imports": [
+        "react",
+        "vaul",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/dropdown-menu.tsx",
+      "ext": ".tsx",
+      "bytes": 8313,
+      "estimatedTokens": 2079,
+      "hash": "798b5337dc147d88",
+      "mtimeMs": 1781263529033,
+      "symbols": [
+        "DropdownMenu",
+        "DropdownMenuPortal",
+        "DropdownMenuTrigger",
+        "DropdownMenuContent",
+        "DropdownMenuGroup",
+        "DropdownMenuItem",
+        "DropdownMenuCheckboxItem",
+        "DropdownMenuRadioGroup",
+        "DropdownMenuRadioItem",
+        "DropdownMenuLabel",
+        "DropdownMenuSeparator",
+        "DropdownMenuShortcut",
+        "DropdownMenuSub",
+        "DropdownMenuSubTrigger",
+        "DropdownMenuSubContent"
+      ],
+      "imports": [
+        "react",
+        "@radix-ui/react-dropdown-menu",
+        "lucide-react",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/form.tsx",
+      "ext": ".tsx",
+      "bytes": 3785,
+      "estimatedTokens": 947,
+      "hash": "b181a640358bd91b",
+      "mtimeMs": 1781263529035,
+      "symbols": [
+        "FormItem",
+        "FormLabel",
+        "FormControl",
+        "FormDescription",
+        "FormMessage"
+      ],
+      "imports": [
+        "react",
+        "@radix-ui/react-label",
+        "@radix-ui/react-slot",
+        "react-hook-form",
+        "./utils",
+        "./label"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/hover-card.tsx",
+      "ext": ".tsx",
+      "bytes": 1537,
+      "estimatedTokens": 385,
+      "hash": "6ec1ef98aef3898e",
+      "mtimeMs": 1781263529007,
+      "symbols": [
+        "HoverCard",
+        "HoverCardTrigger",
+        "HoverCardContent"
+      ],
+      "imports": [
+        "react",
+        "@radix-ui/react-hover-card",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/input-otp.tsx",
+      "ext": ".tsx",
+      "bytes": 2282,
+      "estimatedTokens": 571,
+      "hash": "b15b03f71841b176",
+      "mtimeMs": 1781263529010,
+      "symbols": [
+        "InputOTP",
+        "InputOTPGroup",
+        "InputOTPSlot",
+        "InputOTPSeparator"
+      ],
+      "imports": [
+        "react",
+        "input-otp",
+        "lucide-react",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/input.tsx",
+      "ext": ".tsx",
+      "bytes": 963,
+      "estimatedTokens": 241,
+      "hash": "cb82ffcd1a9accdf",
+      "mtimeMs": 1781263529005,
+      "symbols": [
+        "Input"
+      ],
+      "imports": [
+        "react",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/label.tsx",
+      "ext": ".tsx",
+      "bytes": 614,
+      "estimatedTokens": 154,
+      "hash": "5ed157f039340ced",
+      "mtimeMs": 1781263529027,
+      "symbols": [
+        "Label"
+      ],
+      "imports": [
+        "react",
+        "@radix-ui/react-label",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/menubar.tsx",
+      "ext": ".tsx",
+      "bytes": 8426,
+      "estimatedTokens": 2107,
+      "hash": "1f0173397dac560a",
+      "mtimeMs": 1781263529012,
+      "symbols": [
+        "Menubar",
+        "MenubarMenu",
+        "MenubarGroup",
+        "MenubarPortal",
+        "MenubarRadioGroup",
+        "MenubarTrigger",
+        "MenubarContent",
+        "MenubarItem",
+        "MenubarCheckboxItem",
+        "MenubarRadioItem",
+        "MenubarLabel",
+        "MenubarSeparator",
+        "MenubarShortcut",
+        "MenubarSub",
+        "MenubarSubTrigger",
+        "MenubarSubContent"
+      ],
+      "imports": [
+        "react",
+        "@radix-ui/react-menubar",
+        "lucide-react",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/navigation-menu.tsx",
+      "ext": ".tsx",
+      "bytes": 6684,
+      "estimatedTokens": 1671,
+      "hash": "df9f6e0c1d3fb1b2",
+      "mtimeMs": 1781263529001,
+      "symbols": [
+        "NavigationMenu",
+        "NavigationMenuList",
+        "NavigationMenuItem",
+        "NavigationMenuTrigger",
+        "NavigationMenuContent",
+        "NavigationMenuViewport",
+        "NavigationMenuLink",
+        "NavigationMenuIndicator"
+      ],
+      "imports": [
+        "react",
+        "@radix-ui/react-navigation-menu",
+        "class-variance-authority",
+        "lucide-react",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/pagination.tsx",
+      "ext": ".tsx",
+      "bytes": 2709,
+      "estimatedTokens": 678,
+      "hash": "10bad2279ea5120a",
+      "mtimeMs": 1781263529000,
+      "symbols": [
+        "Pagination",
+        "PaginationContent",
+        "PaginationItem",
+        "PaginationLink",
+        "PaginationPrevious",
+        "PaginationNext",
+        "PaginationEllipsis"
+      ],
+      "imports": [
+        "react",
+        "lucide-react",
+        "./utils",
+        "./button"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/popover.tsx",
+      "ext": ".tsx",
+      "bytes": 1641,
+      "estimatedTokens": 411,
+      "hash": "f14e16bebcfb1b60",
+      "mtimeMs": 1781263529009,
+      "symbols": [
+        "Popover",
+        "PopoverTrigger",
+        "PopoverContent",
+        "PopoverAnchor"
+      ],
+      "imports": [
+        "react",
+        "@radix-ui/react-popover",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/progress.tsx",
+      "ext": ".tsx",
+      "bytes": 743,
+      "estimatedTokens": 186,
+      "hash": "956cf4b485bcf576",
+      "mtimeMs": 1781263529004,
+      "symbols": [
+        "Progress"
+      ],
+      "imports": [
+        "react",
+        "@radix-ui/react-progress",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/radio-group.tsx",
+      "ext": ".tsx",
+      "bytes": 1471,
+      "estimatedTokens": 368,
+      "hash": "ecaeebb62d064893",
+      "mtimeMs": 1781263528998,
+      "symbols": [
+        "RadioGroup",
+        "RadioGroupItem"
+      ],
+      "imports": [
+        "react",
+        "@radix-ui/react-radio-group",
+        "lucide-react",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/resizable.tsx",
+      "ext": ".tsx",
+      "bytes": 2036,
+      "estimatedTokens": 509,
+      "hash": "7930ed39d1095de9",
+      "mtimeMs": 1781263529003,
+      "symbols": [
+        "ResizablePanelGroup",
+        "ResizablePanel",
+        "ResizableHandle"
+      ],
+      "imports": [
+        "react",
+        "lucide-react",
+        "react-resizable-panels",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/scroll-area.tsx",
+      "ext": ".tsx",
+      "bytes": 1649,
+      "estimatedTokens": 413,
+      "hash": "5bd9bb1d6909467b",
+      "mtimeMs": 1781263528995,
+      "symbols": [
+        "ScrollArea",
+        "ScrollBar"
+      ],
+      "imports": [
+        "react",
+        "@radix-ui/react-scroll-area",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/select.tsx",
+      "ext": ".tsx",
+      "bytes": 6275,
+      "estimatedTokens": 1569,
+      "hash": "6aaf2111952394fb",
+      "mtimeMs": 1781263529046,
+      "symbols": [
+        "Select",
+        "SelectGroup",
+        "SelectValue",
+        "SelectTrigger",
+        "SelectContent",
+        "SelectLabel",
+        "SelectItem",
+        "SelectSeparator",
+        "SelectScrollUpButton",
+        "SelectScrollDownButton"
+      ],
+      "imports": [
+        "react",
+        "@radix-ui/react-select",
+        "lucide-react",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/separator.tsx",
+      "ext": ".tsx",
+      "bytes": 707,
+      "estimatedTokens": 177,
+      "hash": "54cc34fc3ef7e445",
+      "mtimeMs": 1781263528993,
+      "symbols": [
+        "Separator"
+      ],
+      "imports": [
+        "react",
+        "@radix-ui/react-separator",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/sheet.tsx",
+      "ext": ".tsx",
+      "bytes": 4105,
+      "estimatedTokens": 1027,
+      "hash": "8e1e064f92e2463b",
+      "mtimeMs": 1781263528992,
+      "symbols": [
+        "Sheet",
+        "SheetTrigger",
+        "SheetClose",
+        "SheetPortal",
+        "SheetOverlay",
+        "SheetContent",
+        "SheetHeader",
+        "SheetFooter",
+        "SheetTitle",
+        "SheetDescription"
+      ],
+      "imports": [
+        "react",
+        "@radix-ui/react-dialog",
+        "lucide-react",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/sidebar.tsx",
+      "ext": ".tsx",
+      "bytes": 21663,
+      "estimatedTokens": 5416,
+      "hash": "24e197a06698ac06",
+      "mtimeMs": 1781263528991,
+      "symbols": [
+        "useSidebar",
+        "SidebarProvider",
+        "Sidebar",
+        "SidebarTrigger",
+        "SidebarRail",
+        "SidebarInset",
+        "SidebarInput",
+        "SidebarHeader",
+        "SidebarFooter",
+        "SidebarSeparator",
+        "SidebarContent",
+        "SidebarGroup",
+        "SidebarGroupLabel",
+        "SidebarGroupAction",
+        "SidebarGroupContent",
+        "SidebarMenu",
+        "SidebarMenuItem",
+        "SidebarMenuButton",
+        "SidebarMenuAction",
+        "SidebarMenuBadge",
+        "SidebarMenuSkeleton",
+        "SidebarMenuSub",
+        "SidebarMenuSubItem",
+        "SidebarMenuSubButton"
+      ],
+      "imports": [
+        "react",
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "lucide-react",
+        "./use-mobile",
+        "./utils",
+        "./button",
+        "./input",
+        "./separator",
+        "./sheet",
+        "./skeleton",
+        "./tooltip"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/skeleton.tsx",
+      "ext": ".tsx",
+      "bytes": 275,
+      "estimatedTokens": 69,
+      "hash": "7fd5d7f3ea479c3c",
+      "mtimeMs": 1781263528999,
+      "symbols": [
+        "Skeleton"
+      ],
+      "imports": [
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/slider.tsx",
+      "ext": ".tsx",
+      "bytes": 2006,
+      "estimatedTokens": 502,
+      "hash": "19dd9d8b758f41fa",
+      "mtimeMs": 1781263529030,
+      "symbols": [
+        "Slider"
+      ],
+      "imports": [
+        "react",
+        "@radix-ui/react-slider",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/sonner.tsx",
+      "ext": ".tsx",
+      "bytes": 571,
+      "estimatedTokens": 143,
+      "hash": "c5853f16cc11cb69",
+      "mtimeMs": 1781263528997,
+      "symbols": [],
+      "imports": [
+        "next-themes",
+        "sonner"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/switch.tsx",
+      "ext": ".tsx",
+      "bytes": 1182,
+      "estimatedTokens": 296,
+      "hash": "d4c744131c616130",
+      "mtimeMs": 1781263529034,
+      "symbols": [
+        "Switch"
+      ],
+      "imports": [
+        "react",
+        "@radix-ui/react-switch",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/table.tsx",
+      "ext": ".tsx",
+      "bytes": 2460,
+      "estimatedTokens": 615,
+      "hash": "e4ec7d3be042efd0",
+      "mtimeMs": 1781263528989,
+      "symbols": [
+        "Table",
+        "TableHeader",
+        "TableBody",
+        "TableFooter",
+        "TableRow",
+        "TableHead",
+        "TableCell",
+        "TableCaption"
+      ],
+      "imports": [
+        "react",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/tabs.tsx",
+      "ext": ".tsx",
+      "bytes": 1945,
+      "estimatedTokens": 487,
+      "hash": "933b8f421bd84b21",
+      "mtimeMs": 1781263529023,
+      "symbols": [
+        "Tabs",
+        "TabsList",
+        "TabsTrigger",
+        "TabsContent"
+      ],
+      "imports": [
+        "react",
+        "@radix-ui/react-tabs",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/textarea.tsx",
+      "ext": ".tsx",
+      "bytes": 767,
+      "estimatedTokens": 192,
+      "hash": "6c3127c28ba1dda0",
+      "mtimeMs": 1781263528986,
+      "symbols": [
+        "Textarea"
+      ],
+      "imports": [
+        "react",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/toggle-group.tsx",
+      "ext": ".tsx",
+      "bytes": 1920,
+      "estimatedTokens": 480,
+      "hash": "43e56c5487ed93a2",
+      "mtimeMs": 1781263528984,
+      "symbols": [
+        "ToggleGroup",
+        "ToggleGroupItem"
+      ],
+      "imports": [
+        "react",
+        "@radix-ui/react-toggle-group",
+        "class-variance-authority",
+        "./utils",
+        "./toggle"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/toggle.tsx",
+      "ext": ".tsx",
+      "bytes": 1565,
+      "estimatedTokens": 392,
+      "hash": "31f91bca26bed6bc",
+      "mtimeMs": 1781263529028,
+      "symbols": [
+        "Toggle"
+      ],
+      "imports": [
+        "react",
+        "@radix-ui/react-toggle",
+        "class-variance-authority",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/tooltip.tsx",
+      "ext": ".tsx",
+      "bytes": 1897,
+      "estimatedTokens": 475,
+      "hash": "2f3a8720fb4b75c6",
+      "mtimeMs": 1781263528983,
+      "symbols": [
+        "TooltipProvider",
+        "Tooltip",
+        "TooltipTrigger",
+        "TooltipContent"
+      ],
+      "imports": [
+        "react",
+        "@radix-ui/react-tooltip",
+        "./utils"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/use-mobile.ts",
+      "ext": ".ts",
+      "bytes": 585,
+      "estimatedTokens": 147,
+      "hash": "738d8e4520edeca7",
+      "mtimeMs": 1781263528988,
+      "symbols": [
+        "useIsMobile",
+        "useIsMobile"
+      ],
+      "imports": [
+        "react"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/components/ui/utils.ts",
+      "ext": ".ts",
+      "bytes": 169,
+      "estimatedTokens": 43,
+      "hash": "d1f1e0d62cb8d8d1",
+      "mtimeMs": 1781263529040,
+      "symbols": [
+        "cn",
+        "cn"
+      ],
+      "imports": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/context/AppContext.tsx",
+      "ext": ".tsx",
+      "bytes": 6787,
+      "estimatedTokens": 1589,
+      "hash": "59baa354e66739c9",
+      "mtimeMs": 1781263529059,
+      "symbols": [
+        "Lang",
+        "Theme",
+        "MainTab",
+        "KnowledgeSubView",
+        "AppProvider",
+        "useApp",
+        "AppProvider"
+      ],
+      "imports": [
+        "react",
+        "sonner",
+        "../types",
+        "../data/mock"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/data/mock.ts",
+      "ext": ".ts",
+      "bytes": 11885,
+      "estimatedTokens": 2888,
+      "hash": "1cc034f0a8e4ff64",
+      "mtimeMs": 1781263529061,
+      "symbols": [
+        "searchFiles",
+        "projects",
+        "searchFiles",
+        "makeSkills"
+      ],
+      "imports": [
+        "../types"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/src/app/types.ts",
+      "ext": ".ts",
+      "bytes": 1383,
+      "estimatedTokens": 346,
+      "hash": "1142242932fde132",
+      "mtimeMs": 1781263529063,
+      "symbols": [
+        "ProjectStatus",
+        "GitInfo",
+        "KnowledgeNode",
+        "Skill",
+        "Project"
+      ],
+      "imports": [],
+      "score": 0
+    },
+    {
+      "path": "figma/src/imports/pasted_text/ai-knowledge-center-ui-spec.md",
+      "ext": ".md",
+      "bytes": 11229,
+      "estimatedTokens": 1674,
+      "hash": "e66fa79eb73e40c7",
+      "mtimeMs": 1781263529073,
+      "symbols": [],
+      "imports": [],
+      "score": 0
+    },
+    {
+      "path": "figma/src/main.tsx",
+      "ext": ".tsx",
+      "bytes": 183,
+      "estimatedTokens": 46,
+      "hash": "31534914ad17a147",
+      "mtimeMs": 1781263528963,
+      "symbols": [],
+      "imports": [
+        "react-dom/client",
+        "./app/App.tsx",
+        "./styles/index.css"
+      ],
+      "score": 0
+    },
+    {
+      "path": "figma/vite.config.ts",
+      "ext": ".ts",
+      "bytes": 926,
+      "estimatedTokens": 231,
+      "hash": "ee76dd1dd0bf18cc",
+      "mtimeMs": 1781263529076,
+      "symbols": [
+        "figmaAssetResolver"
+      ],
+      "imports": [
+        "vite",
+        "path",
+        "@tailwindcss/vite",
+        "@vitejs/plugin-react"
+      ],
+      "score": 0
+    },
+    {
+      "path": "package-lock.json",
+      "ext": ".json",
+      "bytes": 311192,
+      "estimatedTokens": 77798,
+      "hash": "0909502659142c1a",
+      "mtimeMs": 1783591041007,
+      "symbols": [],
+      "imports": [],
+      "score": 0
+    },
+    {
+      "path": "package.json",
+      "ext": ".json",
+      "bytes": 2241,
+      "estimatedTokens": 561,
+      "hash": "a02956ce32713b58",
+      "mtimeMs": 1783591041003,
+      "symbols": [],
+      "imports": [],
+      "score": 0
+    },
+    {
+      "path": "src/cli/aikc.ts",
+      "ext": ".ts",
+      "bytes": 7724,
+      "estimatedTokens": 1931,
+      "hash": "c37f403318fe6229",
+      "mtimeMs": 1783591035453,
+      "symbols": [
+        "packageVersion",
+        "stateRoot",
+        "pidFilePath",
+        "optionArgs",
+        "startServer",
+        "startServerInBackground",
+        "readInlineOption",
+        "stopServer",
+        "addServerOptions"
+      ],
+      "imports": [
+        "node:child_process",
+        "node:fs",
+        "node:os",
+        "node:path",
+        "node:url",
+        "cac"
+      ],
+      "score": 0
+    },
+    {
+      "path": "src/cli/autostart.ts",
+      "ext": ".ts",
+      "bytes": 4218,
+      "estimatedTokens": 1055,
+      "hash": "c252a06dcc31c4f4",
+      "mtimeMs": 1781867771960,
+      "symbols": [
+        "AutostartAction",
+        "AutostartOptions",
+        "runAutostart",
+        "quoteWindowsCommand",
+        "windowsTaskCommand",
+        "macLaunchAgentPath",
+        "escapePlist",
+        "macPlist",
+        "installWindows",
+        "uninstallWindows",
+        "statusWindows",
+        "installMac",
+        "uninstallMac",
+        "statusMac",
+        "runAutostart"
+      ],
+      "imports": [
+        "node:fs/promises",
+        "node:os",
+        "node:path",
+        "node:child_process",
+        "node:util"
+      ],
+      "score": 0
+    },
+    {
+      "path": "src/cli/doctor.ts",
+      "ext": ".ts",
+      "bytes": 4779,
+      "estimatedTokens": 1195,
+      "hash": "037126aff654d9b4",
+      "mtimeMs": 1782152765654,
+      "symbols": [
+        "runDoctor",
+        "run",
+        "check",
+        "serverState",
+        "unresolvedCandidates",
+        "runDoctor"
+      ],
+      "imports": [
+        "node:child_process",
+        "node:fs",
+        "node:os",
+        "node:path",
+        "../server/manifest-loader.js"
+      ],
+      "score": 0
+    },
+    {
+      "path": "src/cli/init-project.ts",
+      "ext": ".ts",
+      "bytes": 2160,
+      "estimatedTokens": 537,
+      "hash": "e976c86dd41349cd",
+      "mtimeMs": 1781246418421,
+      "symbols": [
+        "argValue",
+        "normalizeProjectId"
+      ],
+      "imports": [
+        "node:fs/promises",
+        "node:path",
+        "yaml",
+        "../shared/manifest.js"
+      ],
+      "score": 0
+    },
+    {
+      "path": "src/cli/mcp-server.ts",
+      "ext": ".ts",
+      "bytes": 8313,
+      "estimatedTokens": 2079,
+      "hash": "249204f2fcbe15b0",
+      "mtimeMs": 1782293832332,
+      "symbols": [
+        "runMcpServer",
+        "toolResult",
+        "errorResult",
+        "firstProjectId",
+        "resolveProjectId",
+        "projectRoot",
+        "runProjectScript",
+        "runMcpServer"
+      ],
+      "imports": [
+        "node:child_process",
+        "node:path",
+        "@modelcontextprotocol/sdk/server/mcp.js",
+        "@modelcontextprotocol/sdk/server/stdio.js",
+        "zod/v4",
+        "../server/command-runner.js",
+        "../server/project-service.js"
+      ],
+      "score": 0
+    },
+    {
+      "path": "src/cli/postinstall.ts",
+      "ext": ".ts",
+      "bytes": 2710,
+      "estimatedTokens": 678,
+      "hash": "2c11dc7b39ca3fb8",
+      "mtimeMs": 1782150470894,
+      "symbols": [
+        "isGlobalInstall",
+        "stateRoot",
+        "pidFilePath",
+        "readServerState",
+        "isProcessRunning",
+        "waitForExit",
+        "restartArgs",
+        "restartServer"
+      ],
+      "imports": [
+        "node:child_process",
+        "node:fs",
+        "node:os",
+        "node:path",
+        "node:url"
+      ],
+      "score": 0
+    },
+    {
+      "path": "src/client/api.ts",
+      "ext": ".ts",
+      "bytes": 2395,
+      "estimatedTokens": 599,
+      "hash": "73d4b78eeed90f15",
+      "mtimeMs": 1781251844029,
+      "symbols": [
+        "fetchProjects",
+        "fetchProject",
+        "runCommand",
+        "searchKnowledge",
+        "listKnowledge",
+        "previewKnowledge",
+        "errorMessage",
+        "fetchProjects",
+        "fetchProject",
+        "runCommand",
+        "searchKnowledge",
+        "listKnowledge",
+        "previewKnowledge"
+      ],
+      "imports": [
+        "../shared/api.js"
+      ],
+      "score": 0
+    },
+    {
+      "path": "src/client/App.tsx",
+      "ext": ".tsx",
+      "bytes": 71405,
+      "estimatedTokens": 17620,
+      "hash": "aed4ab79f00174e3",
+      "mtimeMs": 1782293793243,
+      "symbols": [
+        "App",
+        "readStoredLanguage",
+        "readStoredTheme",
+        "readUrlProjectFilter",
+        "readUrlParam",
+        "statusTone",
+        "formatDuration",
+        "formatFileSize",
+        "formatDate",
+        "shortPath",
+        "normalizeKnowledgePath",
+        "fileIconForPath",
+        "MarkdownPreview",
+        "copyText",
+        "assetStatus",
+        "basename",
+        "skillDisplayName",
+        "compareSkillItems",
+        "breadcrumbParts",
+        "gateBadge",
+        "agentKnowledgeInitPrompt",
+        "createKnowledgeTree",
+        "sortKnowledgeTree",
+        "countKnowledgeFiles",
+        "KnowledgeTree",
+        "KnowledgeTreeFolder",
+        "KnowledgeSearchPanel",
+        "CapabilityPanel",
+        "DetailPanel",
+        "ProjectMenu"
+      ],
+      "imports": [
+        "react",
+        "@tanstack/react-query",
+        "framer-motion",
+        "react-markdown",
+        "remark-gfm",
+        "sonner",
+        "lucide-react",
+        "./api.js",
+        "../shared/api.js"
+      ],
+      "score": 0
+    },
+    {
+      "path": "src/client/main.tsx",
+      "ext": ".tsx",
+      "bytes": 607,
+      "estimatedTokens": 152,
+      "hash": "f685a043657a27fe",
+      "mtimeMs": 1781166025412,
+      "symbols": [],
+      "imports": [
+        "react",
+        "react-dom/client",
+        "@tanstack/react-query",
+        "./App.js",
+        "./styles.css"
+      ],
+      "score": 0
+    },
+    {
+      "path": "src/server/command-runner.ts",
+      "ext": ".ts",
+      "bytes": 2296,
+      "estimatedTokens": 574,
+      "hash": "b24b8de67d8cc4c9",
+      "mtimeMs": 1781246878951,
+      "symbols": [
+        "runProjectCommand",
+        "fallbackTraceId",
+        "runProjectCommand"
+      ],
+      "imports": [
+        "node:crypto",
+        "@opentelemetry/api",
+        "execa",
+        "../shared/api.js",
+        "../shared/manifest.js",
+        "./project-service.js",
+        "./telemetry.js"
+      ],
+      "score": 0
+    },
+    {
+      "path": "src/server/index.ts",
+      "ext": ".ts",
+      "bytes": 4828,
+      "estimatedTokens": 1207,
+      "hash": "e5554003c118d79d",
+      "mtimeMs": 1782149992987,
+      "symbols": [
+        "removePidFile"
+      ],
+      "imports": [
+        "node:fs",
+        "node:path",
+        "fastify",
+        "@fastify/static",
+        "./paths.js",
+        "./project-service.js",
+        "./command-runner.js",
+        "./telemetry.js",
+        "../shared/api.js"
+      ],
+      "score": 0
+    },
+    {
+      "path": "src/server/manifest-loader.ts",
+      "ext": ".ts",
+      "bytes": 3915,
+      "estimatedTokens": 979,
+      "hash": "2f66fe8ee1fcaf52",
+      "mtimeMs": 1782128667219,
+      "symbols": [
+        "loadManifest",
+        "pathExists",
+        "readPackageScripts",
+        "normalizeProjectId",
+        "inferManifest",
+        "loadManifest"
+      ],
+      "imports": [
+        "node:fs/promises",
+        "node:path",
+        "yaml",
+        "../shared/manifest.js"
+      ],
+      "score": 0
+    },
+    {
+      "path": "src/server/paths.ts",
+      "ext": ".ts",
+      "bytes": 744,
+      "estimatedTokens": 186,
+      "hash": "d413a6eb66a84dcf",
+      "mtimeMs": 1781867670158,
+      "symbols": [
+        "appRoot",
+        "userHome",
+        "stateRoot",
+        "workspaceRoot",
+        "configDir",
+        "registryPath",
+        "registryExamplePath",
+        "clientDistPath"
+      ],
+      "imports": [
+        "node:path",
+        "node:os",
+        "node:url"
+      ],
+      "score": 0
+    },
+    {
+      "path": "src/server/project-initializer.ts",
+      "ext": ".ts",
+      "bytes": 64721,
+      "estimatedTokens": 16158,
+      "hash": "918904dfbc4164f3",
+      "mtimeMs": 1783601009331,
+      "symbols": [
+        "ProjectInitializationResult",
+        "ensureProjectInitialized",
+        "pathExists",
+        "normalizeProjectId",
+        "writeFileIfMissing",
+        "loadMd",
+        "exists",
+        "run",
+        "exists",
+        "check",
+        "exists",
+        "fileInfo",
+        "value",
+        "value",
+        "value",
+        "ignorePatterns",
+        "glob",
+        "ignored",
+        "walk",
+        "symbols",
+        "imports",
+        "value",
+        "run",
+        "check",
+        "split",
+        "agentsMd",
+        "manifestYaml",
+        "ensureProjectInitialized"
+      ],
+      "imports": [
+        "node:fs/promises",
+        "node:path",
+        "yaml",
+        "../shared/manifest.js",
+        "node:fs",
+        "node:child_process",
+        "node:crypto"
+      ],
+      "score": 0
+    },
+    {
+      "path": "src/server/project-service.ts",
+      "ext": ".ts",
+      "bytes": 19213,
+      "estimatedTokens": 4804,
+      "hash": "2b06f26d06e623be",
+      "mtimeMs": 1782293345864,
+      "symbols": [
+        "rememberRun",
+        "listProjects",
+        "getProject",
+        "searchKnowledge",
+        "listKnowledgeFiles",
+        "previewKnowledgeFile",
+        "findRunnable",
+        "pathExists",
+        "probeAsync",
+        "gitSummary",
+        "normalizeGitPath",
+        "fileTouchesPath",
+        "uniqueKnowledgePaths",
+        "resolveProjectPath",
+        "isKnowledgePathAllowed",
+        "isSearchableFile",
+        "collectKnowledgeFiles",
+        "excerptLine",
+        "countTextOccurrences",
+        "compareKnowledgeItems",
+        "emptyKnowledgeRevision",
+        "knowledgeRevision",
+        "gateStatus",
+        "mcpServerStatus",
+        "telemetryStatus",
+        "integrationStatus",
+        "daggerStatus",
+        "rememberRun",
+        "listProjects",
+        "getProject"
+      ],
+      "imports": [
+        "node:fs/promises",
+        "node:path",
+        "fast-glob",
+        "minisearch",
+        "simple-git",
+        "./config.js",
+        "./manifest-loader.js",
+        "./project-initializer.js",
+        "../shared/api.js",
+        "../shared/manifest.js"
+      ],
+      "score": 0
+    },
+    {
+      "path": "src/server/telemetry.ts",
+      "ext": ".ts",
+      "bytes": 920,
+      "estimatedTokens": 230,
+      "hash": "01ad8a856789e623",
+      "mtimeMs": 1781246613880,
+      "symbols": [
+        "setupTelemetry",
+        "getTracer",
+        "setupTelemetry",
+        "getTracer"
+      ],
+      "imports": [
+        "@opentelemetry/api",
+        "@opentelemetry/resources",
+        "@opentelemetry/sdk-trace-base",
+        "@opentelemetry/sdk-trace-node",
+        "@opentelemetry/semantic-conventions"
+      ],
+      "score": 0
+    },
+    {
+      "path": "src/shared/api.ts",
+      "ext": ".ts",
+      "bytes": 3568,
+      "estimatedTokens": 892,
+      "hash": "f887719cb469acd5",
+      "mtimeMs": 1782293336852,
+      "symbols": [
+        "GitSummary",
+        "FileProbe",
+        "KnowledgeRevision",
+        "ProjectInitialization",
+        "GateStatus",
+        "McpServerStatus",
+        "TelemetryStatus",
+        "DaggerStatus",
+        "IntegrationStatus",
+        "ProjectSummary",
+        "RegistrySummary",
+        "KnowledgeSearchResult",
+        "KnowledgeSearchResponse",
+        "KnowledgePreview",
+        "KnowledgeListSort",
+        "KnowledgeListItem",
+        "KnowledgeListResponse",
+        "CommandRunSummary",
+        "CommandRunRequest",
+        "ApiError"
+      ],
+      "imports": [
+        "./manifest.js"
+      ],
+      "score": 0
+    },
+    {
+      "path": "tsconfig.build.json",
+      "ext": ".json",
+      "bytes": 253,
+      "estimatedTokens": 64,
+      "hash": "4cb26299a20f96eb",
+      "mtimeMs": 1781256947872,
+      "symbols": [],
+      "imports": [],
+      "score": 0
+    },
+    {
+      "path": "tsconfig.json",
+      "ext": ".json",
+      "bytes": 727,
+      "estimatedTokens": 182,
+      "hash": "7930409e7398d346",
+      "mtimeMs": 1781165807071,
+      "symbols": [],
+      "imports": [],
+      "score": 0
+    },
+    {
+      "path": "vite.config.ts",
+      "ext": ".ts",
+      "bytes": 318,
+      "estimatedTokens": 80,
+      "hash": "58e20cd97e98d1c9",
+      "mtimeMs": 1781165807072,
+      "symbols": [],
+      "imports": [
+        "@vitejs/plugin-react",
+        "vite"
+      ],
+      "score": 0
+    }
+  ],
+  "recommendedFiles": [
+    "ai-knowledge/scripts/ai-workflow-start.cjs",
+    "src/cli/project-upgrader.ts",
+    "ai-knowledge/core/LOAD.md",
+    "ai-knowledge/core/project-capabilities.md",
+    "ai-knowledge/core/token-efficiency.md",
+    "ai-knowledge/evals/workflow-smoke.json",
+    "ai-knowledge/scripts/context-pack.cjs",
+    "ai-knowledge/scripts/eval-workflow.cjs",
+    "ai-knowledge/scripts/knowledge-token-check.cjs",
+    "ai-knowledge/scripts/repo-map.cjs",
+    "ai-knowledge/scripts/token-budget-check.cjs",
+    "ai-knowledge/skills/aikc-project-workflow/SKILL.md"
+  ]
+}

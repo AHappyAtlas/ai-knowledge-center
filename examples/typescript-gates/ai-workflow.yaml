@@ -1,0 +1,35 @@
+schemaVersion: 1
+id: typescript-gates-example
+name: TypeScript Gates Example
+description: Minimal TypeScript project showing explicit AIKC verification gates.
+knowledge:
+  load: ai-knowledge/LOAD.md
+  core: ai-knowledge/core
+  aiLoad: ai-knowledge/ai/LOAD.md
+  skills: ai-knowledge/skills
+  skillIndex: ai-knowledge/skills/SKILL_INDEX.md
+  agentsFile: AGENTS.md
+gates:
+  - id: typecheck
+    label: Typecheck
+    script: typecheck
+    packageManager: npm
+    category: typecheck
+  - id: lint
+    label: Lint
+    script: lint
+    packageManager: npm
+    category: lint
+  - id: build
+    label: Build
+    script: build
+    packageManager: npm
+    category: build
+mcp:
+  servers:
+    - id: aikc
+      label: AI Knowledge Center MCP
+      type: stdio
+      command: aikc
+      args: [mcp, --project, .]
+      scope: repository

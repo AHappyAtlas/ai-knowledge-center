@@ -1,0 +1,218 @@
+schemaVersion: 1
+id: ai-knowledge-center
+name: AI Knowledge Center
+description: Local AI workflow control center for project-provided knowledge,
+  gates, and dashboards.
+knowledge:
+  load: ai-knowledge/LOAD.md
+  core: ai-knowledge/core
+  aiLoad: ai-knowledge/ai/LOAD.md
+  skills: ai-knowledge/skills
+  skillIndex: ai-knowledge/skills/SKILL_INDEX.md
+  closeoutPrompt: ai-knowledge/core/LOAD-END.md
+  agentsFile: AGENTS.md
+commands:
+  - id: aikc-ensure
+    label: Ensure AIKC CLI
+    command: node ai-knowledge/scripts/ensure-aikc-cli.cjs
+  - id: aikc-start
+    label: Start AI Knowledge Center dashboard
+    command: node ai-knowledge/scripts/ensure-aikc-cli.cjs --start
+  - id: aikc-mcp
+    label: Run AIKC MCP server
+    command: aikc mcp --project .
+  - id: ai-start
+    label: AI workflow start router
+    command: node ai-knowledge/scripts/ai-workflow-start.cjs
+  - id: ai-closeout
+    label: AI closeout review and knowledge capture
+    command: node ai-knowledge/scripts/ai-closeout.cjs
+  - id: human-docs-check
+    label: Human-readable knowledge companion check
+    command: node ai-knowledge/scripts/human-docs-check.cjs
+  - id: doctor
+    label: AIKC workflow doctor
+    command: node ai-knowledge/scripts/doctor.cjs
+  - id: context-pack
+    label: AI context pack
+    command: node ai-knowledge/scripts/context-pack.cjs
+  - id: log-summary
+    label: Summarize bounded log output
+    command: node ai-knowledge/scripts/log-summary.cjs
+  - id: run-bounded
+    label: Run command with bounded output
+    command: node ai-knowledge/scripts/run-bounded.cjs
+  - id: repo-map
+    label: Build AI repo map
+    command: node ai-knowledge/scripts/repo-map.cjs --write
+  - id: token-budget-check
+    label: Token budget regression check
+    command: node ai-knowledge/scripts/token-budget-check.cjs
+  - id: observe-workflow
+    label: Record workflow observation
+    command: node ai-knowledge/scripts/observe-workflow.cjs
+  - id: task-state
+    label: AI task state checkpoint
+    command: node ai-knowledge/scripts/task-state.cjs status
+  - id: eval-workflow
+    label: Workflow smoke eval
+    command: node ai-knowledge/scripts/eval-workflow.cjs
+  - id: aikc-upgrade
+    label: Upgrade AI workflow templates
+    command: node ai-knowledge/scripts/ensure-aikc-cli.cjs --upgrade
+gates:
+  - id: code-review
+    label: Code review
+    command: node ai-knowledge/scripts/code-review.cjs
+    category: review
+  - id: knowledge-check
+    label: Knowledge index and entrypoint check
+    command: node ai-knowledge/scripts/knowledge-check.cjs
+    category: knowledge
+  - id: human-docs-check
+    label: Human-readable knowledge companion check
+    command: node ai-knowledge/scripts/human-docs-check.cjs
+    category: knowledge
+  - id: eval-workflow
+    label: Workflow smoke eval
+    command: node ai-knowledge/scripts/eval-workflow.cjs
+    category: test
+  - id: token-budget-check
+    label: Token budget regression check
+    command: node ai-knowledge/scripts/token-budget-check.cjs
+    category: test
+  - id: typecheck
+    label: TypeScript typecheck
+    script: typecheck
+    packageManager: npm
+    category: typecheck
+  - id: lint
+    label: ESLint
+    script: lint
+    packageManager: npm
+    category: lint
+  - id: build
+    label: Production build
+    script: build
+    packageManager: npm
+    category: custom
+loops:
+  task:
+    input: user task plus project manifest
+    output: final response with changed files, validation, review, knowledge
+      decision, and remaining risk
+    validation:
+      - code-review
+      - knowledge-check
+      - human-docs-check
+    budget:
+      maxRetries: 2
+      maxRuntimeMs: 1800000
+    stop: applicable gates pass and closeout decision is complete
+    escalate: same blocker repeats, destructive permission is needed, or task scope
+      changes
+    description: Standard bounded task loop for non-read-only AIKC work.
+  upgrade:
+    input: target project root and latest AIKC package
+    output: upgraded AI workflow files, candidate merges, and registered project
+    validation:
+      - knowledge-check
+      - human-docs-check
+    budget:
+      maxRetries: 2
+      maxRuntimeMs: 900000
+    stop: templates are current or candidates are created for semantic merge
+    escalate: conflicting human docs or destructive overwrite would be required
+    description: Safe AI workflow initialization and upgrade loop.
+  release:
+    input: package source changes and npm credentials
+    output: verified npm package release and installed latest CLI
+    validation:
+      - knowledge-check
+      - human-docs-check
+      - typecheck
+      - lint
+      - build
+    budget:
+      maxRetries: 1
+      maxRuntimeMs: 1800000
+    stop: npm dist-tag points to the released version and CLI smoke passes
+    escalate: publish permission, token expiry, or registry verification fails
+    description: Package release loop with explicit validation and stop conditions.
+mcp:
+  servers:
+    - id: repo-filesystem
+      label: Repo-scoped filesystem
+      type: stdio
+      command: npx
+      args:
+        - -y
+        - "@modelcontextprotocol/server-filesystem"
+        - .
+      scope: repository
+      description: Repo-scoped filesystem MCP; never grant paths outside this project
+        without explicit user approval.
+    - id: aikc
+      label: AI Knowledge Center MCP
+      type: stdio
+      command: aikc
+      args:
+        - mcp
+        - --project
+        - .
+      scope: repository
+      description: Repo-scoped AIKC MCP tools for manifest, doctor, context-pack,
+        knowledge search, skills, and allowlisted gates.
+integrations:
+  docs:
+    provider: context7
+    mode: optional
+    label: Context7 docs
+    description: Optional current package documentation lookup for implementation tasks.
+  repoDocs:
+    provider: custom
+    mode: optional
+    label: Repository docs MCP
+    description: Optional task-scoped open-source repository documentation lookup
+      for external package research; prefer read-only and do not broaden local
+      filesystem scope.
+  semanticCodeSearch:
+    provider: custom
+    mode: optional
+    label: Semantic code-search MCP
+    description: Optional repository-scoped semantic code retrieval when
+      AIKC repo-map recommendations are too broad for large codebases.
+  browserQa:
+    provider: playwright
+    mode: optional
+    label: Playwright QA
+    description: Optional browser smoke testing for dashboard or web UI changes.
+  vcs:
+    provider: github-mcp
+    mode: optional
+    label: GitHub MCP
+    description: Optional GitHub issue, pull request, release, and workflow integration.
+telemetry:
+  enabled: true
+  serviceName: ai-knowledge-center
+  exporter: console
+  env:
+    AIKC_TELEMETRY_EXPORTER: console
+dashboard:
+  watch:
+    - ai-knowledge/core
+    - ai-knowledge/skills
+    - ai-knowledge/human
+    - ai-knowledge/references
+    - AGENTS.md
+    - ai-workflow.yaml
+    - src
+    - config
+  links:
+    - label: Local dashboard
+      url: http://127.0.0.1:4318
+    - label: Dev UI
+      url: http://127.0.0.1:5177
+dagger:
+  enabled: false
+  modulePath: .

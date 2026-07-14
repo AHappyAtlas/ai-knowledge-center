@@ -1,0 +1,13 @@
+{
+  "name": "aikc-typescript-gates-example",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "lint": "node scripts/lint.cjs",
+    "build": "tsc -p tsconfig.build.json"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

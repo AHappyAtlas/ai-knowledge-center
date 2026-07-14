@@ -1,0 +1,24 @@
+schemaVersion: 1
+id: multi-agent-skills-example
+name: Multi-agent Skills Example
+description: Repo-scoped AIKC MCP with portable project skills.
+knowledge:
+  load: AGENTS.md
+  core: ai-knowledge
+  aiLoad: AGENTS.md
+  skills: ai-knowledge/skills
+  skillIndex: AGENTS.md
+  agentsFile: AGENTS.md
+commands:
+  - id: verify
+    label: Verify example
+    command: node --version
+    description: Safe allowlisted verification command.
+mcp:
+  servers:
+    - id: aikc
+      label: AI Knowledge Center MCP
+      type: stdio
+      command: aikc
+      args: [mcp, --project, .]
+      scope: repository

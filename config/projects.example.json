@@ -1,0 +1,18 @@
+{
+  "projects": [
+    {
+      "path": "C:/Users/youni/Documents/GitHub/dota-legion-clean"
+    },
+    {
+      "path": "C:/Users/youni/Documents/GitHub/my-new-ai-project",
+      "id": "my-new-ai-project",
+      "name": "My New AI Project",
+      "description": "Auto-created minimal AI workflow scaffold when missing.",
+      "packageManager": "npm"
+    },
+    {
+      "path": "C:/Users/youni/Documents/GitHub/external-project-i-do-not-want-created",
+      "autoInit": false
+    }
+  ]
+}

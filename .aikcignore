@@ -1,0 +1,23 @@
+# AIKC context denylist. Keep high-churn and generated files out of default AI context.
+.git/**
+.aikc/runs/**
+.aikc/index/**
+.aikc/observability/**
+ai-knowledge/human/**
+ai-knowledge/references/**
+ai-knowledge/.token-check-state.json
+node_modules/**
+dist/**
+build/**
+coverage/**
+.cache/**
+.vite/**
+.next/**
+.turbo/**
+*.log
+*.tmp
+*.aikc-upgrade.md
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
