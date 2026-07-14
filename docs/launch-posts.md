@@ -3,6 +3,9 @@
 These drafts are starting points. Verify each claim against the released
 version and link to the public repository before publishing.
 
+Track each published post with the [launch metrics template](launch-metrics.md)
+instead of treating impressions or stars as proof of activation.
+
 ## English
 
 **Your coding agent read the docs. Did it run the right checks?**
